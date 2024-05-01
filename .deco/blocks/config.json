@@ -1,1 +1,36 @@
-{"__resolveType": "site/flags/config.ts","variants": [{"rule": {"traffic": 0.5,"__resolveType": "website/matchers/random.ts"},"value": {"test": "Variant","__resolveType": "site/loaders/config.ts"}},{"rule": {"__resolveType": "website/matchers/always.ts"},"value": {"test": "Default","__resolveType": "site/loaders/config.ts"}}]}
+{
+    "__resolveType": "site/flags/config.ts",
+    "variants": [
+      {
+        "rule": {
+          "traffic": 0.5,
+          "__resolveType": "website/matchers/random.ts"
+        },
+        "value": {
+          "configurations": [
+            {
+              "props":{
+                "jsToRun": "document.querySelector(`[data-testid='ta-btn-complete-purchase']`).style.background = `blue`"
+              }
+            }
+          ],
+          "__resolveType": "site/loaders/config.ts"
+        }
+      },
+      {
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        },
+        "value": {
+          "configurations": [
+            {
+              "props":{
+                "jsToRun": "document.querySelector(`[data-testid='ta-btn-complete-purchase']`).style.background = `red`"
+              }
+            }
+          ],
+          "__resolveType": "site/loaders/config.ts"
+        }
+      }
+    ]
+  }
