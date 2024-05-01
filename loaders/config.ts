@@ -11,10 +11,10 @@ type JSToRun = string;
 export interface JS {
   props: {
     jsToRun: JSToRun;
-  }
+  };
 }
 
-export type Configuration = JS
+export type Configuration = JS;
 
 export interface Props {
   configurations?: Configuration[];
