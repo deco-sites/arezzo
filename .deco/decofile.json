@@ -1,4 +1,28 @@
 {
+  "config": {
+    "__resolveType": "site/flags/config.ts",
+    "variants": [
+      {
+        "rule": {
+          "traffic": 0.5,
+          "__resolveType": "website/matchers/random.ts"
+        },
+        "value": {
+          "test": "Variant",
+          "__resolveType": "site/loaders/config.ts"
+        }
+      },
+      {
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        },
+        "value": {
+          "test": "Default",
+          "__resolveType": "site/loaders/config.ts"
+        }
+      }
+    ]
+  },
   "Banner Grid - 01": {
     "title": "Summer bags",
     "banners": [
