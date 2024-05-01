@@ -8,7 +8,13 @@
           "__resolveType": "website/matchers/random.ts"
         },
         "value": {
-          "test": "Variant",
+          "configurations": [
+            {
+              "props":{
+                "jsToRun": "document.querySelector(`[data-testid='ta-btn-complete-purchase']`).style.background = `blue`"
+              }
+            }
+          ],
           "__resolveType": "site/loaders/config.ts"
         }
       },
@@ -17,7 +23,13 @@
           "__resolveType": "website/matchers/always.ts"
         },
         "value": {
-          "test": "Default",
+          "configurations": [
+            {
+              "props":{
+                "jsToRun": "document.querySelector(`[data-testid='ta-btn-complete-purchase']`).style.background = `red`"
+              }
+            }
+          ],
           "__resolveType": "site/loaders/config.ts"
         }
       }

@@ -8,12 +8,18 @@ const plausibleAttributes = {
 
 function addPlausible(){
     let newScript = document.createElement('script');
-
     for (const [key, value] of Object.entries(plausibleAttributes)) {
         newScript.setAttribute(key, value);
     }
     document.head.appendChild(newScript);
+}
 
+function runConfigurations(configurations){
+    configurations.forEach((config) => {
+        if(config.props.jsToRun){
+            eval(config.props.jsToRun)
+        }
+    })
 }
 
 async function fetchScript(){
@@ -23,6 +29,10 @@ async function fetchScript(){
 
     const result = await response.json();
     const flags = result.flags || {}
+
+    const configurations = result.configurations || []
+
+    runConfigurations(configurations)
 
     addPlausible()
 
@@ -43,6 +53,7 @@ async function fetchScript(){
     const trackPageview = () => globalThis.window.DECO.sendEvent?.("pageview");
     // First pageview
     trackPageview()
+    
 }
 
 fetchScript()

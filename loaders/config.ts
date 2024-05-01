@@ -2,12 +2,26 @@ import { allowCorsFor } from "deco/mod.ts";
 import { AppContext } from "../apps/site.ts";
 import { getFlagsFromRequest } from "apps/utils/cookie.ts";
 
+/**
+ * @title JavaScript to run
+ * @format textarea
+ */
+type JSToRun = string;
+
+export interface JS {
+  props: {
+    jsToRun: JSToRun;
+  }
+}
+
+export type Configuration = JS
+
 export interface Props {
-  test?: string;
+  configurations?: Configuration[];
 }
 
 const loader = (
-  { test }: Props,
+  { configurations }: Props,
   req: Request,
   ctx: AppContext,
 ) => {
@@ -20,7 +34,7 @@ const loader = (
   _flags.forEach((flag) => flags[flag.name] = flag.value);
 
   return {
-    test: test,
+    configurations,
     flags,
   };
 };
