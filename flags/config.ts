@@ -8,7 +8,7 @@ import multivariate, {
  * @title Loader Variants
  */
 export default function SectionVariants(
-  props: MultivariateProps<Loader>
+  props: MultivariateProps<Loader>,
 ): MultivariateFlag<Loader> {
   return multivariate(props);
 }
