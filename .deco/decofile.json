@@ -8,11 +8,13 @@
           "__resolveType": "website/matchers/random.ts"
         },
         "value": {
-          "configurations": [
+          "injectedScript": "document.querySelector(`.cart__main-title`).textContent = `CARRINHO`",
+          "injectedStyle": ".total-details-and-purchase__button { background-color: blue !important; }",
+          "trackedElements": [
             {
-              "props":{
-                "jsToRun": "document.querySelector(`[data-testid='ta-btn-complete-purchase']`).style.background = `blue`"
-              }
+              "cssSelector": ".total-details-and-purchase__button",
+              "eventType": "click",
+              "eventName": "purchase_button"
             }
           ],
           "__resolveType": "site/loaders/config.ts"
@@ -23,14 +25,15 @@
           "__resolveType": "website/matchers/always.ts"
         },
         "value": {
-          "configurations": [
+          "injectedStyle": ".total-details-and-purchase__button { background-color: red !important; }",
+          "__resolveType": "site/loaders/config.ts",
+          "trackedElements": [
             {
-              "props":{
-                "jsToRun": "document.querySelector(`[data-testid='ta-btn-complete-purchase']`).style.background = `red`"
-              }
+              "cssSelector": ".total-details-and-purchase__button",
+              "eventType": "click",
+              "eventName": "purchase_button"
             }
-          ],
-          "__resolveType": "site/loaders/config.ts"
+          ]
         }
       }
     ]

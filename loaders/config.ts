@@ -2,26 +2,28 @@ import { allowCorsFor } from "deco/mod.ts";
 import { AppContext } from "../apps/site.ts";
 import { getFlagsFromRequest } from "apps/utils/cookie.ts";
 
-/**
+export interface TrackElement {
+  cssSelector: string;
+  eventType: "click" | "hover";
+  eventName: string;
+}
+
+export interface Props {
+  /**
  * @title JavaScript to run
  * @format textarea
  */
-type JSToRun = string;
-
-export interface JS {
-  props: {
-    jsToRun: JSToRun;
-  };
-}
-
-export type Configuration = JS;
-
-export interface Props {
-  configurations?: Configuration[];
+  injectedScript?: string;
+  /**
+   * @title CSS to run
+   * @format textarea
+   */
+  injectedStyle?: string;
+  trackedElements?: TrackElement[];
 }
 
 const loader = (
-  { configurations }: Props,
+  { injectedScript, injectedStyle, trackedElements }: Props,
   req: Request,
   ctx: AppContext,
 ) => {
@@ -34,7 +36,9 @@ const loader = (
   _flags.forEach((flag) => flags[flag.name] = flag.value);
 
   return {
-    configurations,
+    injectedScript,
+    injectedStyle,
+    trackedElements,
     flags,
   };
 };
