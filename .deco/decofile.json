@@ -2570,8 +2570,7 @@
     "variants": [
       {
         "rule": {
-          "traffic": 0.5,
-          "__resolveType": "website/matchers/random.ts"
+          "__resolveType": "Buy Button"
         },
         "value": {
           "injectedScript": "document.querySelector('.cart__main-title').textContent = 'CARRINHO';",
@@ -3711,5 +3710,9 @@
   },
   "Preview /loaders/config.ts": {
     "__resolveType": "site/loaders/config.ts"
+  },
+  "Buy Button": {
+    "__resolveType": "website/matchers/random.ts",
+    "traffic": 0.5
   }
 }
