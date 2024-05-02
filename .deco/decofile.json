@@ -2573,8 +2573,8 @@
           "__resolveType": "Buy Button"
         },
         "value": {
-          "injectedScript": "document.querySelector('.cart__main-title').textContent = 'CARRINHO';",
-          "injectedStyle": ".total-details-and-purchase__button { background-color: blue !important; }",
+          "injectedScript": "window.onload = function() {\n  document.querySelector('.cart__main-title').textContent = 'CARRINHO';\n}\n",
+          "injectedStyle": ".total-details-and-purchase__button { \n  background-color: blue !important; \n}",
           "trackedElements": [
             {
               "cssSelector": ".total-details-and-purchase__button",
@@ -2590,7 +2590,7 @@
           "__resolveType": "website/matchers/always.ts"
         },
         "value": {
-          "injectedStyle": ".total-details-and-purchase__button { background-color: red !important; }",
+          "injectedStyle": ".total-details-and-purchase__button { \n  background-color: red !important; \n}",
           "__resolveType": "site/loaders/config.ts",
           "trackedElements": [
             {
