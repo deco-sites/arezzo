@@ -66,9 +66,23 @@ async function fetchScript(){
 
     addPlausible()
 
-    runJS(jsToRun)
-    addCSS(cssToAdd)
-    trackElements(elementsToTrack, flags)
+    try{
+        runJS(jsToRun)
+    }catch(e){
+        console.error(e)
+    }
+    try{
+        addCSS(cssToAdd)
+    }catch(e){
+        console.error(e)
+    }
+    try{
+        window.onload = function() {
+            trackElements(elementsToTrack, flags)
+        }
+    }catch(e){
+        console.error(e)
+    }
 
     // wait plausible load
     await sleep(100)
@@ -83,11 +97,9 @@ async function fetchScript(){
         });
     }
 
-
     const trackPageview = () => globalThis.window.DECO.sendEvent?.("pageview");
     // First pageview
-    trackPageview()
-    
+    trackPageview()    
 }
 
 fetchScript()
