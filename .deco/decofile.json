@@ -3665,5 +3665,44 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
+  },
+  "abTest": {
+    "__resolveType": "site/flags/config.ts",
+    "variants": [
+      {
+        "rule": {
+          "traffic": 0.5,
+          "__resolveType": "website/matchers/random.ts"
+        },
+        "value": {
+          "injectedScript": "document.querySelector(.cart__main-title).textContent = CARRINHO",
+          "injectedStyle": ".total-details-and-purchase__button { background-color: blue !important; }",
+          "trackedElements": [
+            {
+              "cssSelector": ".total-details-and-purchase__button",
+              "eventType": "click",
+              "eventName": "purchase_button"
+            }
+          ],
+          "__resolveType": "site/loaders/config.ts"
+        }
+      },
+      {
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        },
+        "value": {
+          "injectedStyle": ".total-details-and-purchase__button { background-color: red !important; }",
+          "__resolveType": "site/loaders/config.ts",
+          "trackedElements": [
+            {
+              "cssSelector": ".total-details-and-purchase__button",
+              "eventType": "click",
+              "eventName": "purchase_button"
+            }
+          ]
+        }
+      }
+    ]
   }
 }
