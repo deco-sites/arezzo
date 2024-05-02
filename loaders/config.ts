@@ -11,12 +11,14 @@ export interface TrackElement {
 export interface Props {
   /**
  * @title JavaScript to run
- * @format textarea
+ * @format code
+ * @language javascript
  */
   injectedScript?: string;
   /**
    * @title CSS to run
-   * @format textarea
+   * @format code
+   * @language css
    */
   injectedStyle?: string;
   trackedElements?: TrackElement[];
