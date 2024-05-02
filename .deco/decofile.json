@@ -2573,7 +2573,7 @@
           "__resolveType": "Buy Button"
         },
         "value": {
-          "injectedScript": "window.onload = function() {\n  document.querySelector('.cart__main-title').textContent = 'CARRINHO';\n}\n",
+          "injectedScript": "window.addEventListener('load', (event) => {\n  document.querySelector('.cart__main-title').textContent = 'CARRINHO';\n})\n",
           "injectedStyle": ".total-details-and-purchase__button { \n  background-color: blue !important; \n}",
           "trackedElements": [
             {
