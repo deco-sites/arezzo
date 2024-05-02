@@ -77,9 +77,9 @@ async function fetchScript(){
         console.error(e)
     }
     try{
-        window.onload = function() {
+        window.addEventListener("load", (event) => {
             trackElements(elementsToTrack, flags)
-        }
+        });
     }catch(e){
         console.error(e)
     }
