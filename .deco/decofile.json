@@ -111,6 +111,10 @@
     ],
     "__resolveType": "site/sections/Content/Benefits.tsx"
   },
+  "Buy Button": {
+    "__resolveType": "website/matchers/random.ts",
+    "traffic": 0.5
+  },
   "Campaign Timer - 01": {
     "link": {
       "href": "https://github.com/deco-cx",
@@ -2114,6 +2118,12 @@
     ],
     "__resolveType": "commerce/loaders/product/extensions/listingPage.ts"
   },
+  "Preview /loaders/config.ts": {
+    "__resolveType": "site/loaders/config.ts"
+  },
+  "Preview site/loaders/config.ts": {
+    "__resolveType": "site/loaders/config.ts"
+  },
   "Product Card Layout - 01": {
     "layout": {
       "hide": {},
@@ -2574,7 +2584,7 @@
         },
         "value": {
           "injectedScript": "window.addEventListener('load', (event) => {\n  document.querySelector('.cart__main-title').textContent = 'CARRINHO';\n})\n",
-          "injectedStyle": ".total-details-and-purchase__button { \n  background-color: blue !important; \n}",
+          "injectedStyle": ".total-details-and-purchase__button { \n  background-color: orange !important; \n}",
           "trackedElements": [
             {
               "cssSelector": ".total-details-and-purchase__button",
@@ -3704,15 +3714,5 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
-  },
-  "Preview site/loaders/config.ts": {
-    "__resolveType": "site/loaders/config.ts"
-  },
-  "Preview /loaders/config.ts": {
-    "__resolveType": "site/loaders/config.ts"
-  },
-  "Buy Button": {
-    "__resolveType": "website/matchers/random.ts",
-    "traffic": 0.5
   }
 }
