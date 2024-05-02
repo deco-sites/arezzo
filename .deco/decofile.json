@@ -2574,7 +2574,7 @@
           "__resolveType": "website/matchers/random.ts"
         },
         "value": {
-          "injectedScript": "document.querySelector(.cart__main-title).textContent = CARRINHO",
+          "injectedScript": "document.querySelector('.cart__main-title').textContent = 'CARRINHO';",
           "injectedStyle": ".total-details-and-purchase__button { background-color: blue !important; }",
           "trackedElements": [
             {
@@ -2599,7 +2599,8 @@
               "eventType": "click",
               "eventName": "purchase_button"
             }
-          ]
+          ],
+          "injectedScript": ""
         }
       }
     ]

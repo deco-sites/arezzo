@@ -24,6 +24,9 @@ export interface Props {
   trackedElements?: TrackElement[];
 }
 
+/**
+ * @title Layout Effects
+ */
 const loader = (
   { injectedScript, injectedStyle, trackedElements }: Props,
   req: Request,
