@@ -43,7 +43,7 @@ function trackElements(elementsToTrack, flags){
 }
 
 async function fetchScript(){
-    const response = await fetch("http://localhost:8000/live/invoke/config", {
+    const response = await fetch("http://localhost:8000/live/invoke/abTest", {
         credentials: 'include'
     });
 
@@ -53,7 +53,7 @@ async function fetchScript(){
     if(Object.entries(flags).length === 0){
         // fetch again to get flags
         // this is a workaround to get flags from the server
-        const response = await fetch("http://localhost:8000/live/invoke/config", {
+        const response = await fetch("http://localhost:8000/live/invoke/abTest", {
             credentials: 'include'
         });
         const result = await response.json();
