@@ -2600,7 +2600,7 @@
           "__resolveType": "website/matchers/always.ts"
         },
         "value": {
-          "injectedStyle": ".total-details-and-purchase__button { \n  background-color: red !important; \n}",
+          "injectedStyle": "",
           "__resolveType": "site/loaders/config.ts",
           "trackedElements": [
             {
