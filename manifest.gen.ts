@@ -6,8 +6,9 @@ import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$$$$$$0 from "./flags/config.ts";
 import * as $$$2 from "./loaders/availableIcons.ts";
-import * as $$$3 from "./loaders/config.ts";
-import * as $$$4 from "./loaders/icons.ts";
+import * as $$$3 from "./loaders/cms.ts";
+import * as $$$4 from "./loaders/config.ts";
+import * as $$$5 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
@@ -63,8 +64,9 @@ import * as $$$$$$48 from "./sections/Theme/Theme.tsx";
 const manifest = {
   "loaders": {
     "site/loaders/availableIcons.ts": $$$2,
-    "site/loaders/config.ts": $$$3,
-    "site/loaders/icons.ts": $$$4,
+    "site/loaders/cms.ts": $$$3,
+    "site/loaders/config.ts": $$$4,
+    "site/loaders/icons.ts": $$$5,
     "site/loaders/Layouts/ProductCard.tsx": $$$0,
     "site/loaders/List/Sections.tsx": $$$1,
   },
