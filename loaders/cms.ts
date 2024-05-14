@@ -1,16 +1,22 @@
+
+export interface Config {
+  text: string;
+  age: number;
+  showMenu: boolean;
+}
+
 interface Props {
-  /**
-  * @description The description of name.
-  */
-  name?: string;
+
+  configs?: Config[];
 }
 
-export interface Returns {
-  name: string
+interface Returns {
+  configs?: Config[];
 }
 
-export default function loader({ name  = "Capy" }: Props): Returns {
+
+export default function loader({ configs }: Props): Returns {
   return { 
-    name,
+    configs,
   }
 }
