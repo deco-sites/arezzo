@@ -1,1 +1,1 @@
-{"__resolveType":"site/loaders/cms.ts","configs":[],"variants":[{"text":"abc"},{"text":"cdf"}]}
+{"__resolveType":"site/loaders/cms.ts","configs":[{"text":"abc","age":12,"showMenu":true},{"text":"sada","age":23,"showMenu":true}],"variants":[{"text":"abc"},{"text":"cdf"}],"text":{"configs":["abc"],"variants":[],"data":[],"content":[]},"age":{"configs":[],"variants":[],"data":[],"content":[]},"showMenu":{"variants":[],"data":[],"configs":[],"content":[]}}
