@@ -24,6 +24,7 @@ export interface Code {
 }
 
 export interface Props {
+  name: string;
   /**
    * @maxItems 2
    */
@@ -35,7 +36,7 @@ export interface Props {
  * @title Layout Effects
  */
 const loader = (
-  { variants, trackedElements }: Props,
+  { name, variants, trackedElements }: Props,
   req: Request,
   ctx: AppContext,
 ) => {
@@ -44,6 +45,7 @@ const loader = (
   });
 
   return {
+    name,
     variants,
     trackedElements,
   };
