@@ -8,7 +8,7 @@ export interface TrackElement {
   eventName: string;
 }
 
-export interface Props {
+export interface Code {
   /**
    * @title JavaScript to run
    * @format code
@@ -21,6 +21,13 @@ export interface Props {
    * @language css
    */
   injectedStyle?: string;
+}
+
+export interface Props {
+  /**
+   * @maxItems 2
+   */
+  variants: Code[];
   trackedElements?: TrackElement[];
 }
 
@@ -28,7 +35,7 @@ export interface Props {
  * @title Layout Effects
  */
 const loader = (
-  { injectedScript, injectedStyle, trackedElements }: Props,
+  { variants, trackedElements }: Props,
   req: Request,
   ctx: AppContext,
 ) => {
@@ -36,15 +43,9 @@ const loader = (
     ctx.response.headers.set(name, value);
   });
 
-  const _flags = getFlagsFromRequest(req);
-  const flags: Record<string, string | boolean> = {};
-  _flags.forEach((flag) => flags[flag.name] = flag.value);
-
   return {
-    injectedScript,
-    injectedStyle,
+    variants,
     trackedElements,
-    flags,
   };
 };
 

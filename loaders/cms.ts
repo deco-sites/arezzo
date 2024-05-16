@@ -1,5 +1,6 @@
 import { allowCorsFor } from "deco/mod.ts";
 import { AppContext } from "../apps/site.ts";
+import { ImageWidget } from "apps/admin/widgets.ts"
 
 export interface WithTraffic<T> {
   /**
@@ -7,19 +8,19 @@ export interface WithTraffic<T> {
    */
   content: T[];
   traffic?: number;
+  /**
+   * @title Run parallel with other tests
+   * @default true
+   */
+  runParallel?: boolean;
 }
 
 interface Props {
   text: WithTraffic<string>;
-  age: WithTraffic<number>;
-  showMenu: WithTraffic<boolean>
+  showMenu: WithTraffic<boolean>;
 }
 
-interface Returns {
-  text: WithTraffic<string>;
-  age: WithTraffic<number>;
-  showMenu: WithTraffic<boolean>
-}
+type Returns = Props;
 
 export default function loader(
   props: Props,   

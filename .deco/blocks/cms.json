@@ -1,1 +1,1 @@
-{"__resolveType":"site/loaders/cms.ts","text":{"traffic":0.5,"content":["Demo!!","Arezzo"]},"age":{"traffic":0.5,"content":[20,25]},"showMenu":{"traffic":0.5,"content":[true,false]}}
+{"__resolveType":"site/loaders/cms.ts","showMenu":{"traffic":0.5,"content":[true,true],"runParallel":false},"text":{"content":["Demo!!","Arezzo!!"],"traffic":0.5,"runParallel":false}}
