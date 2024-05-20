@@ -34,3 +34,5 @@ export default function loader(
 
   return props;
 }
+
+export const cache = "stale-while-revalidate";
