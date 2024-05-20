@@ -1,1 +1,1 @@
-{"__resolveType":"site/loaders/cms.ts","showMenu":{"traffic":0.5,"content":[true,true],"runParallel":false},"text":{"content":["Demo!!","Arezzo!!"],"traffic":0.5,"runParallel":false}}
+{"__resolveType":"site/loaders/config.ts","text":{"content":["Tavano!!!","Arezzo!!"],"runParallel":true,"traffic":0.5},"showMenu":{"content":[true,true],"runParallel":false,"traffic":0.5},"showShelf":{"content":[],"runParallel":false}}

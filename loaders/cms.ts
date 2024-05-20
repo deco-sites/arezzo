@@ -1,6 +1,5 @@
 import { allowCorsFor } from "deco/mod.ts";
 import { AppContext } from "../apps/site.ts";
-import { ImageWidget } from "apps/admin/widgets.ts"
 
 export interface WithTraffic<T> {
   /**
@@ -18,6 +17,7 @@ export interface WithTraffic<T> {
 interface Props {
   text: WithTraffic<string>;
   showMenu: WithTraffic<boolean>;
+  showShelf: WithTraffic<boolean>;
 }
 
 type Returns = Props;

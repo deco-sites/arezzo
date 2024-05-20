@@ -1,54 +1,36 @@
 import { allowCorsFor } from "deco/mod.ts";
 import { AppContext } from "../apps/site.ts";
-import { getFlagsFromRequest } from "apps/utils/cookie.ts";
 
-export interface TrackElement {
-  cssSelector: string;
-  eventType: "click" | "hover";
-  eventName: string;
-}
-
-export interface Code {
-  /**
-   * @title JavaScript to run
-   * @format code
-   * @language javascript
-   */
-  injectedScript?: string;
-  /**
-   * @title CSS to run
-   * @format code
-   * @language css
-   */
-  injectedStyle?: string;
-}
-
-export interface Props {
-  name: string;
+export interface WithTraffic<T> {
   /**
    * @maxItems 2
    */
-  variants: Code[];
-  trackedElements?: TrackElement[];
+  content: T[];
+  traffic?: number;
+  /**
+   * @title Run parallel with other tests
+   * @default true
+   */
+  runParallel?: boolean;
 }
 
-/**
- * @title Layout Effects
- */
-const loader = (
-  { name, variants, trackedElements }: Props,
+interface Props {
+  text: WithTraffic<string>;
+  showMenu: WithTraffic<boolean>;
+  showShelf: WithTraffic<boolean>;
+}
+
+type Returns = Props;
+
+export default function loader(
+  props: Props,   
   req: Request,
-  ctx: AppContext,
-) => {
+  ctx: AppContext
+): Returns {
+  
   Object.entries(allowCorsFor(req)).map(([name, value]) => {
     ctx.response.headers.set(name, value);
   });
 
-  return {
-    name,
-    variants,
-    trackedElements,
-  };
-};
-
-export default loader;
+  return props;
+}
