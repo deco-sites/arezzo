@@ -1,1 +1,1 @@
-{"__resolveType":"site/loaders/config.ts","text":{"content":["Tavano!!!","Arezzo!!"],"runParallel":true,"traffic":0.5},"showMenu":{"content":[true,true],"runParallel":false,"traffic":0.5},"showShelf":{"content":[],"runParallel":false},"isInfiniteScroll":{"content":[false,true],"runParallel":true}}
+{"__resolveType":"site/loaders/config.ts","isInfiniteScroll":{"content":[false,true],"runParallel":true}}
