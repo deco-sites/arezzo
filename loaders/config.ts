@@ -18,6 +18,7 @@ interface Props {
   text: WithTraffic<string>;
   showMenu: WithTraffic<boolean>;
   showShelf: WithTraffic<boolean>;
+  isInfiniteScroll: WithTraffic<boolean>
 }
 
 type Returns = Props;
