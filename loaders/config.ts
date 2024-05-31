@@ -30,6 +30,8 @@ export default function loader(
     ctx.response.headers.set(name, value);
   });
 
+  console.log("debug", ctx.response.headers)
+
   return props;
 }
 
