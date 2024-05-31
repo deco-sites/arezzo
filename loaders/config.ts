@@ -25,17 +25,10 @@ export default function loader(
   req: Request,
   ctx: AppContext
 ): Returns {
-  
-  console.log("Time to allow cors.");
 
   Object.entries(allowCorsFor(req)).map(([name, value]) => {
-    console.log("Setting response headers");
     ctx.response.headers.set(name, value);
   });
 
-  console.log("debug", ctx.response.headers);
-
   return props;
 }
-
-export const cache = "stale-while-revalidate";
