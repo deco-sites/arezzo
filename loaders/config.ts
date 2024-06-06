@@ -15,7 +15,7 @@ export interface WithTraffic<T> {
 }
 
 interface Props {
-  isInfiniteScroll: WithTraffic<boolean>
+  webABTestInfiniteScroll: WithTraffic<boolean>
 }
 
 type Returns = Props;
