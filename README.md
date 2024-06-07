@@ -210,7 +210,7 @@ respecting folder structure. This means:
 1. To add JavaScript to the browser, create a component on the `components`
    folder and add an `export { default }` on the islands folder
 
-Check performance best practices on [deco.cx's docs](https://www.deco.cx/docs).
+Check performance best practices on [deco.cx's docs](https://www.deco.cx/docs). 
 
 # Thanks to all contributors !
 
